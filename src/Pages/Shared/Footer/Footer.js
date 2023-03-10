@@ -28,13 +28,13 @@ const Footer = () => {
     return (
         <>
             <div className='footer-container'>
-				<footer className='bg-gray-300 w-full border-b md:border-0 md:static bg-gradient-to-r from-gray-400  to-gray-300 shadow-xl px-4 py-5 mx-auto'>
+				<footer className='w-full border-b md:border-0 md:static bg-gradient-to-r from-sky-300  to-sky-200 shadow-xl px-4 py-5 mx-auto'>
 					<div className='max-w-lg sm:mx-auto sm:text-center'>
 						<div className='flex items-center justify-center'>
-							{/* <img src='Images/logo.png' width={50} height={50} alt='Float UI logo' /> */}
-							<h1 className='text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-900 to-sky-400'>health Coach</h1>
+							
+							<h1 className='text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-orange-700 to-orange-400'>health Coach</h1>
 						</div>
-						<p className='leading-relaxed mt-2 text-[15px]'>I am a believable and trustworthy person. I am a hardworking person. My service is always good and I am always punctual.</p>
+						
 					</div>
 					<ul className='items-center justify-center mt-8 space-y-5 sm:flex sm:space-x-4 sm:space-y-0'>
 						{footerNavs.map((item, idx) => (
@@ -44,7 +44,7 @@ const Footer = () => {
 						))}
 					</ul>
 					<div className='mt-8 items-center justify-center sm:flex'>
-						<div className='mt-4 sm:mt-0 text-blue-900 font-bold'>&copy; 2023 Zakia Aktar All rights reserved</div>
+						
 						<div className='mt-6 sm:mt-0'>
 							<ul className='flex items-center justify-center space-x-4'>
 								<li className='w-10 h-10 border-2 border-blue-600 rounded-full flex items-center justify-center'>
@@ -78,6 +78,7 @@ const Footer = () => {
 								</li>
 							</ul>
 						</div>
+                        
 					</div>
 					<style jsx='true'>{`
 						.svg-icon path,
@@ -86,6 +87,9 @@ const Footer = () => {
 							fill: currentColor;
 						}
 					`}</style>
+
+<div className='w-1/2 mt-4 sm:mt-0 text-blue-900 font-bold mx-auto'>&copy; 2023 Zakia Aktar All rights reserved</div>
+
 				</footer>
 			</div>
         </>

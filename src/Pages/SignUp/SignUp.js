@@ -1,0 +1,62 @@
+import React from 'react';
+import { Link } from 'react-router-dom';
+import img from '../../assets/images/login/login.svg'
+
+const SignUp = () => {
+
+
+    const handleSignUp = event => {
+        event.preventDefault();
+        const form = event.target;
+        const email = form.email.value;
+        const password = form.password.value;
+    }
+
+
+
+
+    return (
+        <div className="hero my-8">
+            <div className="hero-content grid md:grid-cols-2 gap-20 flex-col lg:flex-row">
+                <div className="text-center lg:text-left">
+
+                    <img className='w-4/5' src={img} alt="" />
+                </div>
+                <div className="py-20 card flex-shrink-0  max-w-sm shadow-2xl bg-base-100 rounded-none">
+                    <h1 className="text-3xl text-blue-900 text-center font-bold">Sign Up</h1>
+                    <form onSubmit={handleSignUp} className="card-body">
+                        <div className="form-control">
+                            <label className="label">
+                                <span className="label-text">Name</span>
+                            </label>
+                            <input type="text" name="name" placeholder="Your Name" className="input input-bordered" />
+                        </div>
+                        <div className="form-control">
+                            <label className="label">
+                                <span className="label-text">Email</span>
+                            </label>
+                            <input type="text" name="email" placeholder="email" className="input input-bordered" required />
+                        </div>
+                        <div className="form-control">
+                            <label className="label">
+                                <span className="label-text">Password</span>
+                            </label>
+                            <input type="password" name="password" placeholder="password" className="input input-bordered" required />
+                        </div>
+                        <div className="form-control mt-6">
+                            <input className="btn bg-gradient-to-br from-blue-900 to-purple-500 rounded-none" type="submit" value="Sign Up" />
+                        </div>
+                    </form>
+
+                    <p className='text-center'>Already have an account? <Link className='text-blue-900 font-bold' to='/login'>Login</Link></p>
+
+
+                </div>
+            </div>
+        </div>
+    )
+}
+
+
+
+export default SignUp;
