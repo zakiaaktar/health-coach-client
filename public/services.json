@@ -4,23 +4,23 @@
         "title": "Nutrition Plan",
         "img": "https://i.ibb.co/9G1DbNH/Untitled-design.jpg",
        
-        "price": "20.00",
-        "description": "The goal of a nutrition plan service is to help individuals achieve their health goals by providing personalized nutrition recommendations and guidance."
+        "price": "150.00",
+        "description": "Having a well-planned nutrition plan is essential for maintaining good health and achieving your fitness goals. The goal of a nutrition plan service is to help individuals achieve their health goals by providing personalized nutrition recommendations and guidance. Consistency is key when it comes to nutrition. Stick to your plan and adjust it as needed to achieve your health and fitness goals."
     },
     { 
         "service_id": "02",
         "title": "Exercise Program",
         "img": "https://i.ibb.co/frfTFX1/Untitled-design-2.jpg",
-        "price": "10.00",
-        "description": "Developing a good exercise program involves several factors, such as your fitness goals, current fitness level, time availability, and any medical conditions or injuries you may have.."
+        "price": "200.00",
+        "description": "Designing an exercise program that is appropriate for your specific goals, fitness level, and schedule is crucial for achieving and maintaining good health. Developing a good exercise program involves several factors, such as your fitness goals, current fitness level, time availability, and any medical conditions or injuries you may have.Remember to always listen to your body and adjust your exercise program as needed. Consistency and perseverance are key to achieving your fitness goals."
     },
     
     { 
         "service_id": "03", 
         "title": "Routine Program",
         "img": "https://i.ibb.co/5rdXfDk/Untitled-design-1.jpg",
-        "price": "10.00",
-        "description": "Artistic painted colorful handcrafted Products."
+        "price": "100.00",
+        "description": "Creating a routine program is important for achieving your health and fitness goals. A routine program that includes healthy habits and lifestyle changes can help promote better health. Consistency and commitment are key to maintaining good health. With the right routine program, you can achieve your health goals and lead a healthier, happier life. Maintaining good health requires a combination of healthy habits and lifestyle changes."
     }
     
    

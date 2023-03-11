@@ -20,7 +20,7 @@ const SignUp = () => {
             console.log(user);
             // setAuthToken(user);
         })
-        .catch(err => console.log(err));
+        .then(err => console.log(err));
     }
 
 

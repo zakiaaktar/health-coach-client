@@ -1,8 +1,10 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import img from '../../assets/images/login/login.svg'
+import { AuthContext } from '../../contexts/AuthProvider/AuthProvider';
 
 const Login = () => {
+    const { login } = useContext(AuthContext);
 
 
     const handleLogin = event => {
@@ -10,6 +12,18 @@ const Login = () => {
         const form = event.target;
         const email = form.email.value;
         const password = form.password.value;
+
+
+
+
+        login(email, password)
+        .then(result => {
+            const user = result.user;
+            console.log(user);
+            // setAuthToken(user);
+        })
+        .then(err => console.log(err));
+
     }
 
 

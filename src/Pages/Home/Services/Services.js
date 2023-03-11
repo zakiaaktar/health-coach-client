@@ -7,7 +7,7 @@ const Services = () => {
 
 
     useEffect(() => {
-        fetch('services.json')
+        fetch('http://localhost:4000/services')
             .then(res => res.json())
             .then(data => setServices(data))
     }, []);
@@ -20,7 +20,7 @@ const Services = () => {
             <div className='text-center mb-4'>
                 <p className="text-2xl font-bold text-orange-600">Services</p>
                 <h2 className="text-5xl font-bold"> service area</h2>
-                <p>the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. </p>
+                <p>Health coaches are trained professionals who work with clients to develop personalized health plans and provide guidance and support as they work towards their health and wellness goals. </p>
             </div>
 
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3'>
