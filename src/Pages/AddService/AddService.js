@@ -28,6 +28,27 @@ const AddService = () => {
             phone,
             message
         }
+
+
+        fetch('http://localhost:4000/orders', {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json',
+                // authorization: `Bearer ${localStorage.getItem('showpiece-token')}`
+            },
+            body: JSON.stringify(order)
+        })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data)
+                if (data.acknowledged) {
+                    alert('Order Placed Successfully')
+                    form.reset();
+                }
+            })
+            .catch(er => console.error(er));
+
+
     }
 
 
