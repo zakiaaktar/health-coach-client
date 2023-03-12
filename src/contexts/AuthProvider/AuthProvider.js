@@ -32,7 +32,7 @@ const AuthProvider = ({children}) => {
     }
 
     const logOut = () =>{
-        localStorage.removeItem('showpiece-token');
+        // localStorage.removeItem('showpiece-token');
         return signOut(auth);
     }
 

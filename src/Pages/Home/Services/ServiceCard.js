@@ -11,11 +11,11 @@ const ServiceCard = ({ service }) => {
             <figure><img src={img} alt="Sservice-img" /></figure>
             <div className="card-body">
                 <h2 className="card-title justify-center">{title}</h2>
-                <p className='text-justify'>{description}</p>
-                <p className='text-xl text-orange-600 font-bold text-center'>Price: ${price}</p>
+                <p className='text-justify'>{description.slice(0, 100)}...</p>
+                <p className='text-xl text-green-500 font-bold text-center'>Price: ${price}</p>
                 <div className="card-actions justify-center">
                     <Link to={`/services/${_id}`}>
-                        <button className="btn bg-gradient-to-br from-blue-900 to-purple-500 rounded-none mt-3 pr-24 pl-24 border-none">View Details</button>
+                        <button className="btn bg-green-500 rounded-full px-6 py-3 border-none mt-2 font-bold">View Details</button>
                     </Link>
                 </div>
             </div>

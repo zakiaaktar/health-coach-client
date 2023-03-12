@@ -16,11 +16,13 @@ const Services = () => {
 
 
     return (
-        <div>
-            <div className='text-center mb-4'>
-                <p className="text-2xl font-bold text-orange-600">Services</p>
-                <h2 className="text-5xl font-bold"> service area</h2>
+        <div className='my-20 font-serif'>
+            <div className='text-center'>
+                {/* <p className="text-2xl font-bold text-orange-600">Services</p> */}
+                <h2 className="text-4xl font-bold text-green-500"> Service Area</h2>
+                <div className='w-1/2 mx-auto my-8'>
                 <p>Health coaches are trained professionals who work with clients to develop personalized health plans and provide guidance and support as they work towards their health and wellness goals. </p>
+                </div>
             </div>
 
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3'>
