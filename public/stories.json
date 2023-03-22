@@ -1,0 +1,24 @@
+[
+    { 
+        "service_id": "01",
+        "title": "Nutrition Strategies",
+        "img": "https://i.ibb.co/8KRLfmq/Untitled-design-14.jpg"
+       
+    },
+    { 
+        "service_id": "02",
+        "title": "Workout Routines",
+        "img": "https://i.ibb.co/fd2vYDK/Untitled-design-13.jpg"
+        
+    },
+    
+    { 
+        "service_id": "03", 
+        "title": "Support & Motivation",
+        "img": "https://i.ibb.co/99xdMr3/Untitled-design-12.jpg"
+        
+    }
+    
+   
+]
+
