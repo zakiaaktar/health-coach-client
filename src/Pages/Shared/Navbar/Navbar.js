@@ -1,28 +1,41 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../../../contexts/AuthProvider/AuthProvider';
+
+
+
 
 const Navbar = () => {
+    const { user, logOut } = useContext(AuthContext);
+
+
+    const handleLogOut = () => {
+        logOut()
+            .then()
+            .catch();
+    }
 
 
 
     const menuItems = <>
-    <li className='text-black font-semibold'><Link to='/'>Home</Link></li>
-    <li className='text-black font-semibold'><Link to='/about'>About</Link></li>
-    <li className='text-black font-semibold'><Link to='/services'>Services</Link></li>
-    <li className='text-black font-semibold'><Link to='/testimonial'>Testimonial</Link></li>
-    {/* <li><Link to='/login'>Login</Link></li> */}
-    {/* {
-        user?.email ?
-            <>
-                <li className='text-black font-semibold'><Link to='/orders'>Orders</Link></li>
-                <li className='text-black font-semibold'>
-                    <button onClick={handleLogOut} className='btn-ghost'>Sign Out</button>
-                </li>
-            </>
-            :
-            <li className='text-black font-semibold'><Link to='/login'>Login</Link></li>
-    } */}
-</>
+        <li className='text-black font-semibold'><Link to='/'>Home</Link></li>
+        <li className='text-black font-semibold'><Link to='/about'>About</Link></li>
+        <li className='text-black font-semibold'><Link to='/services'>Services</Link></li>
+        <li className='text-black font-semibold'><Link to='/testimonial'>Testimonial</Link></li>
+        {/* <li><Link to='/login'>Login</Link></li> */}
+        {
+            user?.email ?
+                <>
+                    <li className='text-black font-semibold'><Link to='/orders'>Orders</Link></li>
+                    <li className='text-black font-semibold'>
+                        <button onClick={handleLogOut} className='btn-ghost'>Sign Out</button>
+                    </li>
+                </>
+                :
+                <li className='text-black font-semibold'><Link to='/login'>Login</Link></li>
+        }
+    </>
+
 
 
 
