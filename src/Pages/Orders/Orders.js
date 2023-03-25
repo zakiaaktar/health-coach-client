@@ -1,32 +1,32 @@
-// import React, { useContext, useEffect, useState } from 'react';
-// import { AuthContext } from '../../contexts/AuthProvider/AuthProvider';
-// import OrderRow from './OrderRow';
+import React, { useContext, useEffect, useState } from 'react';
+import { AuthContext } from '../../contexts/AuthProvider/AuthProvider';
+import OrderRow from './OrderRow';
 
-// const Orders = () => {
-//     const { user, logOut } = useContext(AuthContext);
-//     const [orders, setOrders] = useState([]);
+const Orders = () => {
+    const { user, logOut } = useContext(AuthContext);
+    const [orders, setOrders] = useState([]);
 
 
 
-//     useEffect(() => {
-//         fetch(`http://localhost:8000/orders?email=${user?.email}`, {
-//             headers: {
-//                 authorization: `Bearer ${localStorage.getItem('coach-token')}`
-//             }
-//         })
+    useEffect(() => {
+        fetch(`http://localhost:4000/orders?email=${user?.email}`, {
+            // headers: {
+            //     authorization: `Bearer ${localStorage.getItem('coach-token')}`
+            // }
+        })
 
-//             .then(res => {
-//                 if (res.status === 401 || res.status === 403) {
-//                     return logOut()
-//                 }
-//                 return res.json()
-//             })
-//             .then(data => {
-//                 //console.log('received', data)
-//                 setOrders(data)
-//             })
+            .then(res => {
+                // if (res.status === 401 || res.status === 403) {
+                //     return logOut()
+                // }
+                return res.json()
+            })
+            .then(data => {
+                //console.log('received', data)
+                setOrders(data)
+            })
 
-//     }, [user?.email, logOut])
+    }, [user?.email, logOut])
 
 
 
@@ -87,43 +87,43 @@
 
 
 
-//     return (
-//         <div className='lg:w-3/4 mx-auto'>
-//             <h2 className='text-3xl text-center my-10 font-bold'>You have {orders.length} orders</h2>
-//             <div className="overflow-x-auto w-full pb-12">
-//                 <table className="table w-full">
+    return (
+        <div className='lg:w-3/4 mx-auto'>
+            <h2 className='text-3xl text-center my-10 font-bold'>You have {orders.length} orders</h2>
+            <div className="overflow-x-auto w-full pb-12">
+                <table className="table w-full">
 
-//                     <thead>
-//                         <tr>
-//                             <th>
-//                                 {/* <label>
-//                                     <input type="checkbox" className="checkbox" />
-//                                 </label> */}
-//                             </th>
-//                             <th>Name</th>
-//                             <th>Job</th>
-//                             <th>Delete Orders</th>
-//                             <th>Message</th>
-//                         </tr>
-//                     </thead>
-//                     <tbody>
-//                         {
-//                             orders.map(order => <OrderRow
-//                                 key={order._id}
-//                                 order={order}
-//                                 handleDelete={handleDelete}
-//                                 handleStatusUpdate={handleStatusUpdate}
-//                             ></OrderRow>)
-//                         }
+                    <thead>
+                        <tr>
+                            <th>
+                                {/* <label>
+                                    <input type="checkbox" className="checkbox" />
+                                </label> */}
+                            </th>
+                            <th>Name & Phone Number</th>
+                            <th>Service Name & Price</th>
+                            <th>Delete Orders</th>
+                            <th>Message</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {
+                            orders.map(order => <OrderRow
+                                key={order._id}
+                                order={order}
+                                // handleDelete={handleDelete}
+                                // handleStatusUpdate={handleStatusUpdate}
+                            ></OrderRow>)
+                        }
 
-//                     </tbody>
+                    </tbody>
 
 
 
-//                 </table>
-//             </div>
-//         </div>
-//     );
-// };
+                </table>
+            </div>
+        </div>
+    );
+};
 
-// export default Orders;
+export default Orders;

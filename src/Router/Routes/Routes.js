@@ -9,7 +9,7 @@ import Login from "../../Pages/Login/Login";
 import Orders from "../../Pages/Orders/Orders";
 import ServiceDetails from "../../Pages/ServiceDetails/ServiceDetails";
 import SignUp from "../../Pages/SignUp/SignUp";
-import PrivateRoute from "../PrivateRoute/PrivateRoute";
+// import PrivateRoute from "../PrivateRoute/PrivateRoute";
 
 
 
