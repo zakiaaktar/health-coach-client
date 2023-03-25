@@ -7,7 +7,7 @@ const Services = () => {
 
 
     useEffect(() => {
-        fetch('https://health-coach-server-blue.vercel.app/services')
+        fetch('http://localhost:4000/services')
             .then(res => res.json())
             .then(data => setServices(data))
     }, []);
